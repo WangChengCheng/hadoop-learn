@@ -25,12 +25,12 @@ public class MyFileSystemCat {
         try {
             in = fs.open(new Path(uri));
             IOUtils.copyBytes(in, System.out, 4096, false);
-            /**
-             *  Bear in mind that calling seek() is a relatively expensive operation
-             *  and should be done sparingly. You should structure your application
-             *  access patterns to rely on streaming data (by using MapReduce, for
-             *  example) rather than performing a large number of seeks.
-             *                                                    -- Hadoop Book 4e
+            /*
+               Bear in mind that calling seek() is a relatively expensive operation
+               and should be done sparingly. You should structure your application
+               access patterns to rely on streaming data (by using MapReduce, for
+               example) rather than performing a large number of seeks.
+                                                                 -- Hadoop Book 4e
              */
             //test seek()
             LOG.info("read file form 4th byte (from 0)");
